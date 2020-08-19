@@ -1,0 +1,163 @@
+VERY EASY 
+Question 1 
+
+ function convert(m){
+     console.log(m*60);
+ }
+
+ convert(5);
+ convert(3);
+ convert(2);
+
+
+
+Question 2
+
+function divisble(a,b){
+if(a>b){
+    a%b===0?console.log(true):console.log(false)
+    }else{
+     console.log("A should be greater than B");
+       }
+}
+divisble(98,7);
+divisble(85,4);
+
+
+
+
+EASY
+Question 1 
+
+ function count(a,b){
+     let con=0;
+     for(let i=0;i<b.length;i++){
+         if(a===b[i]){
+             con++;
+         }
+     }
+     console.log("count is = ",con);
+ }
+ count("a","edabita");
+ count("c","Chamber of secrets");
+
+
+ Question 2 
+
+ function add(n) {
+   let s = 0;
+   if (n >= 1 && n <= 1000) {
+     for (let i = 1; i <= n; i++) {
+       s = s + i;
+     }
+     console.log("add = ", s);
+   } else {
+     console.log("Number should be between 1 and 1000");
+   }
+ }
+ add(4);
+ add(600);
+ add(2000);
+
+
+  Question 3 
+ function replace_vowewls(s){
+     let str=s.split('');
+     for(let i=0;i<str.length;i++){
+         if(str[i]==='a'){
+             str[i]='1';
+         }else if(str[i]==='e'){
+             str[i]='2';
+         }else if(str[i]==='i'){
+             str[i]='3';
+         }else if(str[i]==='o'){
+             str[i]='4';
+         }else if(str[i]==='u'){
+             str[i]='5';
+         }
+     }
+    
+     console.log(str.join(''));
+ }
+
+ replace_vowewls("karachi");
+ replace_vowewls("chembur")
+
+
+
+
+
+  MEDIUM 
+ Question 1 
+
+ function rev(str,s){
+     let user=str.split(' ').map(e => e.trim());
+     for(let i=0;i<user.length;i++){
+         let word=user[i].split('');
+         if(word[0]===s){
+             user[i]=word.rev().join('');
+         }
+
+     }
+     user=user.join(' ');
+     console.log(user);
+ }
+ rev("word searches are super fun","s");
+ rev("first man to walk on the moon","m");
+
+ Question 2 
+ function testJackpot(str){
+     let ans=str.every(a=>a===str[0])
+     console.log(ans);
+ }
+ testtestJackpot (["@", "@", "@", "@"]) 
+testtestJackpot (["abc", "abc", "abc", "abc"]) 
+testtestJackpot (["SS", "SS", "SS", "SS"]) 
+testtestJackpot (["&&", "&", "&&&", "&&&&"]) 
+testtestJackpot (["SS", "SS", "SS", "Ss"]) 
+
+ Question 3 
+ function removeDups(array){
+
+     var uniqueArray = [];
+         for(i=0; i < array.length; i++){
+         if(uniqueArray.indexOf(array[i]) === -1) {
+             uniqueArray.push(array[i]);
+         }
+     }
+     console.log(uniqueArray);
+ }
+removeDups ([1, 0, 1, 0]) 
+removeDups (["The", "big", "cat"]) 
+removeDups (["John", "Taylor", "John"])
+
+
+
+
+
+
+ HARD 
+ Question 1 
+ function realType(a)
+ {
+ var types = [Function, RegExp, Number, String, Boolean, Array], x, len;
+    
+ if (typeof a === "object" || typeof a === "function") 
+     {
+      for (x = 0, len = types.length; x < len; x++) 
+      {
+             if (a instanceof types[x])
+             {
+                 return types[x];
+             }
+       }
+     }
+    
+     return typeof a;
+ }
+
+ console.log(realType(12));
+ console.log(realType("a"));
+ console.log(realType(true));
+ console.log(realType([]));
+ console.log(realType(null));
